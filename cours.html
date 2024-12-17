@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Un site dédié à l'apprentissage et à l'éducation, offrant des ressources pédagogiques variées pour les étudiants.">
+    <meta name="keywords" content="Lahcen Abouhamou, Azzaitoun, école, éducation, ressources, études, cours, tutoriels, apprentissage, étudiants">
+    <meta name="author" content="Lahcen Abouhamou">
+    <meta http-equiv="refresh" content="300"> <!-- Rafraîchit la page toutes les 5 minutes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Azzaitoun | 1ère année</title>
+    <link rel="icon" href="pic/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/cours.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="botonat">
+        <nav class="nav">
+            <a href="index.html"><button type="button"><img src="pic/retour.png" alt="Retour à l'accueil">&ensp;ACCUEIL</button></a>
+        </nav>
+    </div>
+    <div class="logo">
+        <img src="pic/logo_2%20(2).png" alt="Logo de l'école Azzaitoun"> <!-- Remplacez par le chemin correct -->
+    </div>
+    <div class="container">
+        <nav class="log">
+            <a href="#"><button type="button">S'inscrire</button></a>
+            <a href="#"><button type="button">Se connecter</button></a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="banner_menu">
+        <nav>
+            <ul class="nav_items">
+                <li class="item">
+                    <div class="dropdown">
+                        <img class="image" src="pic/dossier.png" alt="Icone Cours">
+                        <a href="#">Cours</a>
+                    </div>
+                    <ul class="social_links">
+                        <li><a href="#">Cours 1</a></li>
+                        <li><a href="#">Cours 2</a></li>
+                        <li><a href="#">Cours 3</a></li>
+                        <li><a href="#">Cours 4</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <div class="dropdown">
+                        <img class="image" src="pic/dossier.png" alt="Icone Devoirs">
+                        <a href="#">Devoirs</a>
+                    </div>
+                    <ul class="social_links">
+                        <li><a href="#">Devoir 1</a></li>
+                        <li><a href="#">Devoir 2</a></li>
+                        <li><a href="#">Devoir 3</a></li>
+                        <li><a href="#">Devoir 4</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <div class="dropdown">
+                        <img class="image" src="pic/dossier.png" alt="Icone Exercice">
+                        <a href="#">Exercice</a>
+                    </div>
+                    <ul class="social_links">
+                        <li><a href="#" onclick="changeContent('pdf', 'pdf/VOCAB PHRSE DéSORDRE exer Niv1 copie SITE.pdf')">Vocabulaire famille et relations | Verbe être et avoir</a></li>
+                        <li><a href="#">Exercice 2</a></li>
+                        <li><a href="#">Exercice 3</a></li>
+                        <li><a href="#">Exercice 4</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <div class="dropdown">
+                        <img class="image" src="pic/dossier.png" alt="Icone Journal scolaire">
+                        <a href="#">Journal scolaire</a>
+                    </div>
+                    <ul class="social_links">
+                        <li><a href="#">Journal 1</a></li>
+                        <li><a href="#">Journal 2</a></li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <div class="dropdown">
+                        <img class="image" src="pic/dossier.png" alt="Icone Contact">
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <ul class="social_links">
+                        <li><a href="mailto:marouane.abouhamou.10@gmail.com" target="_blank">Gmail</a></li>
+                        <li><a href="https://wa.me/+212684981113" target="_blank">WhatsApp</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <div id="content">
+        <p></p>
+    </div>
+    <div id="CONTENU">
+        <p></p>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="footer-content">
+        <div class="footer-section">
+            <img class="imag_logo" src="pic/logo_2%20(2).png" alt="Logo de l'école Azzaitoun">
+        </div>
+        <div class="footer-section">
+            <h2>Nous contacter</h2>
+            <div class="contact-info">
+                <img src="pic/appel.png" alt="Téléphone">
+                <a href="tel:+212684981113" target="_blank">06 84 98 11 13</a>
+            </div>
+            <div class="contact-info">
+                <img src="pic/mail.png" alt="E-mail">
+                <a href="mailto:marouane.abouhamou.10@gmail.com" target="_blank">Nous écrire</a>
+            </div>
+            <div class="contact-info">
+                <img src="pic/whatsapp.png" alt="WhatsApp">
+                <a href="https://wa.me/+212684981113" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h2>Aide & guides</h2>
+            <div class="service-info"><a href="#">AIDE</a></div>
+            <div class="service-info"><a href="#">Cours</a></div>
+            <div class="service-info"><a href="#">Contrôles</a></div>
+            <div class="service-info"><a href="#">Journal scolaire</a></div>
+        </div>
+
+        <div class="footer-section">
+            <h2>Nos plateformes</h2>
+            <div class="service-info">
+                <img src="pic/youtube.png" alt="YouTube">
+                <a href="#" target="_blank">YOUTUBE</a>
+            </div>
+            <div class="service-info">
+                <img src="pic/facebook.png" alt="Facebook">
+                <a href="#" target="_blank">Facebook</a>
+            </div>
+            <div class="service-info">
+                <img src="pic/instagram.png" alt="Instagram">
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+            <div class="service-info">
+                <img src="pic/twitter2.png" alt="Twitter">
+                <a href="#" target="_blank">X | Twitter</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-to-top">
+        <div class="droit">
+            <p>&copy; 2024 Azzaitoun. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Vérifiez si querySelectorAll est disponible (compatibilité minimale)
+    if (document.querySelectorAll) {
+        // Sélectionnez tous les éléments avec la classe ".item" dans la navigation
+        const items = document.querySelectorAll('.nav_items .item');
+
+        items.forEach(item => {
+            // Ajoutez un écouteur d'événement pour chaque élément de menu
+            item.addEventListener('click', function () {
+                // Ferme les sous-menus des autres éléments
+                items.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        const otherLinks = otherItem.querySelector('.social_links');
+                        if (otherLinks) {
+                            otherLinks.style.display = 'none';
+                        }
+                    }
+                });
+
+                // Bascule le sous-menu de l'élément cliqué
+                const socialLinks = item.querySelector('.social_links');
+                if (socialLinks) {
+                    socialLinks.style.display = (socialLinks.style.display === 'block') ? 'none' : 'block';
+                }
+            });
+        });
+    } else {
+        console.error("Votre navigateur ne prend pas en charge querySelectorAll. Mettez-le à jour pour une meilleure expérience.");
+    }
+
+    // Fonction pour afficher le contenu en fonction du type (texte, image, ou PDF)
+    function changeContent(type, value) {
+        const contentDiv = document.getElementById('content');
+
+        if (!contentDiv) {
+            console.error("Élément #content introuvable dans le DOM.");
+            return;
+        }
+
+        if (type === 'text') {
+            // Afficher un texte
+            contentDiv.innerHTML = `<p>${value}</p>`;
+        } else if (type === 'image') {
+            // Afficher une image
+            contentDiv.innerHTML = `<img src="${value}" alt="Image" style="max-width: 100%; height: auto;">`;
+        } else if (type === 'pdf') {
+            // Afficher un PDF
+            contentDiv.innerHTML = `<iframe src="${value}" style="width: 100%; height: 500px; border: none;"></iframe>`;
+        } else {
+            console.error("Type non pris en charge : " + type);
+        }
+    }
+
+</script>
+
+</body>
+</html>

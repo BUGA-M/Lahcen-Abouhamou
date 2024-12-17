@@ -1,0 +1,311 @@
+/* Réinitialisation des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style général du body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+/* Media Queries */
+
+@font-face
+{
+    font-family: 'police1';
+    src: url("../font_lahcen/RobotoMono-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face
+{
+    font-family: 'police2';
+    src: url("../font_lahcen/BebasNeue-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'AlterousText';
+    src: url("../font_lahcen/Alterous_Display_Preview.otf") format("opentype");
+}
+.header {
+    width: 100%;
+    height: auto;
+    background-color: rgba(34, 79, 65, 0.9);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header .botonat{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    width: 20%;
+}
+.header .botonat .nav button, .header .log button{
+    font-family:'AlterousText','police2',sans-serif;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    margin: 0 4px;
+    border-radius: 15px;
+    border: 1px solid #00ee00;
+    background-color: rgba(34, 79, 65, 0.9);
+    padding: 6px 10px;
+}
+.header .botonat .nav button img{
+    width: 1.8rem;
+    height: 1.8rem;
+    vertical-align: middle;
+}
+.header .botonat .nav button:hover, .header .log button:hover{
+    cursor: pointer;
+}
+.header .botonat .nav button:active, .header .log button:active{
+    transform: scale(0.9);
+
+}
+.header .logo {
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+.header .logo img{
+    margin-top: 0.5rem;
+    width: 7rem;
+    height: 6rem;
+}
+.header .container{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*--------------------------------------------*/
+.banner_menu {
+    width: 20%;
+    min-height: 700px;
+    height: auto;
+    background-color: rgba(215, 215, 215, 0.8);
+    display: flex;
+    box-shadow:4px 2px 15px rgba(0, 0, 0, 0.2) ;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.nav_items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav_items li {
+    position: relative; /* Nécessaire pour le positionnement des sous-menus */
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Changement pour une disposition en colonne */
+    align-items: flex-start; /* Alignement à gauche */
+    transition: background-color 0.3s;
+}
+.nav_items .dropdown a{
+    font-family:'AlterousText',Math,cursive;
+    font-size: 22px;
+    color: #444444;
+    text-decoration: none;
+}
+.nav_items .dropdown a:hover{
+    text-decoration: underline;
+
+}
+.nav_items li:hover {
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+.nav_items li img {
+    opacity: 50%;
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 2.2rem;
+    margin-right: 10px;
+}
+.nav_items li:hover img {
+    opacity: 100%;
+}
+
+.social_links {
+    display: none; /* Masquer les sous-menus par défaut */
+    list-style: none; /* Supprimer le style de liste */
+    padding: 0; /* Supprimer le padding */
+    margin: 5px 0 0 3rem; /* Espacement au-dessus du sous-menu */
+    background-color: white; /* Fond blanc pour le sous-menu */
+    border: 1px solid #ccc; /* Bordure pour le sous-menu */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre pour le sous-menu */
+    z-index: 100; /* S'assurer que le sous-menu est au-dessus */
+    width: 80%; /* S'assurer que le sous-menu prend toute la largeur */
+}
+
+.nav_items li:hover .social_links {
+    display: block; /* Afficher les sous-menus au survol */
+}
+
+.social_links li {
+    padding: 10px; /* Espacement pour les éléments du sous-menu */
+}
+
+.social_links li a {
+    font-family:'AlterousText','police2',sans-serif;
+    font-size: 20px;
+    color: #444444; /* Couleur du texte du sous-menu */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+.social_links li a:hover {
+    color: black; /* Couleur du texte au survol du sous-menu */
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/*----------------------------------------------------------*/
+.footer {
+    color: #000000;
+    background-color: rgba(34, 79, 65, 0.9);
+    width: 100%;
+    height: auto;
+}
+
+.footer-content {
+    padding: 2rem 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Assurer une largeur minimale */
+    margin: 10px;
+}
+.footer-section img{
+    width: 7%;
+}
+.footer-section .imag_logo{
+    width:50%;
+    margin: 2rem 0 0 5.5rem;
+}
+
+.contact-info, .service-info, .contact-hours {
+    margin: 8px 0;
+}
+.footer-section h2{
+    text-align: left;
+    font-size: 2rem;
+    font-family:'police2',Arial,cursive;
+}
+.footer-section a {
+    font-size: 20px;
+    font-family:'police2',Arial,cursive;
+    text-decoration: none;
+    color: #000000;
+    flex-grow: 1;
+
+}
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+.contact-info img, .service-info img {
+    vertical-align: middle; /* Aligner les images avec le texte */
+    filter: grayscale(100%);
+    margin-right: 10px;
+}
+.contact-info:hover img, .service-info:hover img {
+    filter: grayscale(0%);
+}
+
+.back-to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #000000;
+
+}
+.back-to-top a img{
+    position: fixed ;
+    width: 4rem;
+    height: 4rem;
+    bottom: 1rem;
+    right: 1.5rem;
+}
+.back-to-top .droit{
+    font-size: 20px;
+    font-family:'police2',Arial,cursive;
+}
+/*-----------------------------------------------------------*/
+main{
+    min-height: 700px;
+    position: relative; /* Position relative pour le conteneur */
+    width: 100%;
+    background-color: rgba(215, 215, 215, 0.8);
+}
+main #content {
+    position: absolute; /* Position absolue */
+    left: calc(100% - 80%); /* Calcul de la position */
+    top: 0; /* Position verticale */
+    width: 60%; /* Largeur de l'élément */
+    min-height: 700px;
+    background-image: url("../pic/bien.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main #content img {
+    max-width: 100%;
+    min-height: 700px;
+    height: auto;
+}
+
+main #content iframe {
+    width: 100%;
+    min-height: 700px;
+    border: none;
+}
+main #CONTENU {
+    position: absolute; /* Position absolue */
+    left: calc(100% - 20%); /* Calcul de la position */
+    top: 0; /* Position verticale */
+    width: 20%; /* Largeur de l'élément */
+    min-height: 700px;
+    background-color: rgba(215, 215, 215, 0.8);
+    display: flex;
+    box-shadow:1px 1px 15px rgba(0, 0, 0, 0.2) ;
+}
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .banner_menu{
+        width: 100%;
+        min-height: 450px;
+    }
+    .header .botonat .nav button, .header .log a button {
+        margin: 5px 20px 5px 0; /* Ajuste le margin-top des boutons dans la navigation */
+    }
+
+    main #content {
+        width: 100%;
+        position: static;
+        min-height: auto;
+    }
+    main #CONTENU {
+        width: 100%;
+        min-height: 300px;
+        position: static;
+    }  }
