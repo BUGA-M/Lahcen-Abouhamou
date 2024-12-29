@@ -10,6 +10,7 @@
     <title>Azzaitoun | 1ère année</title>
     <link rel="icon" href="pic/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/cours.css">
+
 </head>
 <body>
 <!-- Header -->
@@ -40,10 +41,10 @@
                         <a href="#">Cours</a>
                     </div>
                     <ul class="social_links">
-                        <li><a href="#">Cours 1</a></li>
-                        <li><a href="#">Cours 2</a></li>
-                        <li><a href="#">Cours 3</a></li>
-                        <li><a href="#">Cours 4</a></li>
+                        <li><a href="#" onclick="changeContent('image','pic/barre(1).png','pic/Design.png','pic/barre(1).png','pic/Design.png')">Unite 1 : Famille et relations </a></li>
+                        <li><a href="#">Unite 2 : Lieux de vie </a></li>
+                        <li><a href="#">Unite 3 : loisirs et activites</a></li>
+                        <li><a href="#">Unite 4 : </a></li>
                     </ul>
                 </li>
                 <li class="item">
@@ -64,7 +65,7 @@
                         <a href="#">Exercice</a>
                     </div>
                     <ul class="social_links">
-                        <li><a href="#" onclick="changeContent('pdf', 'pdf/VOCAB PHRSE DéSORDRE exer Niv1 copie SITE.pdf')">Vocabulaire famille et relations | Verbe être et avoir</a></li>
+                        <li><a href="#" onclick="changeContent('pdf', 'pdf/VOCAB PHRSE DéSORDRE exer Niv1 copie SITE.pdf','pdf/REVISION VOCAB UD 1 & 2 Niv 1(correction).pdf')">Vocabulaire famille et relations | Verbe être et avoir</a></li>
                         <li><a href="#">Exercice 2</a></li>
                         <li><a href="#">Exercice 3</a></li>
                         <li><a href="#">Exercice 4</a></li>
@@ -94,7 +95,7 @@
         </nav>
     </section>
     <div id="content">
-        <p></p>
+        <img src="pic/bien.png" alt="école azzaitoun">
     </div>
     <div id="CONTENU">
         <p></p>
@@ -160,37 +161,68 @@
 </footer>
 
 <script>
-    // Vérifiez si querySelectorAll est disponible (compatibilité minimale)
     if (document.querySelectorAll) {
-        // Sélectionnez tous les éléments avec la classe ".item" dans la navigation
         const items = document.querySelectorAll('.nav_items .item');
+        const dropdowns = document.querySelectorAll('.dropdown');
 
+        // Fermer tous les menus initialement
         items.forEach(item => {
-            // Ajoutez un écouteur d'événement pour chaque élément de menu
-            item.addEventListener('click', function () {
-                // Ferme les sous-menus des autres éléments
+            const socialLinks = item.querySelector('.social_links');
+            if (socialLinks) {
+                socialLinks.style.display = 'none';
+            }
+        });
+
+        // Gérer les clics sur les dropdowns plutôt que sur tout l'item
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', function(e) {
+                e.stopPropagation(); // Empêche la propagation aux éléments parents
+                const item = this.closest('.item');
+                const socialLinks = item.querySelector('.social_links');
+
+                // Fermer les autres menus
                 items.forEach(otherItem => {
                     if (otherItem !== item) {
                         const otherLinks = otherItem.querySelector('.social_links');
                         if (otherLinks) {
                             otherLinks.style.display = 'none';
                         }
+                        otherItem.classList.remove('active');
                     }
                 });
 
-                // Bascule le sous-menu de l'élément cliqué
-                const socialLinks = item.querySelector('.social_links');
+                // Basculer le menu actuel
                 if (socialLinks) {
-                    socialLinks.style.display = (socialLinks.style.display === 'block') ? 'none' : 'block';
+                    if (item.classList.contains('active')) {
+                        socialLinks.style.display = 'none';
+                        item.classList.remove('active');
+                    } else {
+                        socialLinks.style.display = 'block';
+                        item.classList.add('active');
+                    }
                 }
             });
+        });
+
+        // Fermer les menus quand on clique en dehors
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.nav_items')) {
+                items.forEach(item => {
+                    const socialLinks = item.querySelector('.social_links');
+                    if (socialLinks) {
+                        socialLinks.style.display = 'none';
+                    }
+                    item.classList.remove('active');
+                });
+            }
         });
     } else {
         console.error("Votre navigateur ne prend pas en charge querySelectorAll. Mettez-le à jour pour une meilleure expérience.");
     }
 
+
     // Fonction pour afficher le contenu en fonction du type (texte, image, ou PDF)
-    function changeContent(type, value) {
+    function changeContent(type, ...values) {
         const contentDiv = document.getElementById('content');
 
         if (!contentDiv) {
@@ -200,18 +232,75 @@
 
         if (type === 'text') {
             // Afficher un texte
-            contentDiv.innerHTML = `<p>${value}</p>`;
+            if (values[0] !== '') {
+                contentDiv.innerHTML = `<p>${values[0]}</p>`;
+            } else {
+                console.error("La valeur de texte est vide.");
+            }
         } else if (type === 'image') {
-            // Afficher une image
-            contentDiv.innerHTML = `<img src="${value}" alt="Image" style="max-width: 100%; height: auto;">`;
+            // Afficher plusieurs images
+            if (values.length > 0) {
+                let imagesHTML = '';
+                values.forEach((value,index) => {
+                    if (value !== '') {
+                        imagesHTML += `
+                    <div style="padding: 5px; text-align: center; font-family: 'AlterousText', 'police2', sans-serif;font-size: 24px; font-weight: 100; color: #444;">
+                        <h3 > Seance ${[index+1]}</h3>
+                    </div>
+                    <div >
+                        <img src="${value}" alt="Image" style="max-width: 100%; height: auto;border-radius: 10px;background: #e0e0e0;
+                                                                box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;">
+                    </div>
+
+                `;
+                    } else {
+                        console.error("Une valeur d'image est vide.");
+                    }
+                });
+                contentDiv.innerHTML = imagesHTML;
+            } else {
+                console.error("Aucune valeur d'image n'est fournie.");
+            }
         } else if (type === 'pdf') {
-            // Afficher un PDF
-            contentDiv.innerHTML = `<iframe src="${value}" style="width: 100%; height: 500px; border: none;"></iframe>`;
+            // Afficher des PDFs avec séparation
+            if (values.length > 0) {
+                let pdf=['Exercices', 'Corrections'];
+                let pdfHTML = '';
+                values.forEach((value, index) => {
+                    if (value !== '') {
+                        pdfHTML += `
+                    <div style="padding: 20px; text-align: center; font-family: 'AlterousText', 'police2', sans-serif;font-size: 24px; font-weight: 100; color: #444;">
+                        <h3 >${[index+1]} )  ${pdf[index]} </h3>
+                    </div>
+                    <div >
+                        <iframe src="${value}" style="width: 100%; height: 500px; border: none;"></iframe>
+                    </div>
+                `;
+                    } else {
+                        console.error("Une valeur de PDF est vide.");
+                    }
+                });
+                contentDiv.innerHTML = pdfHTML;
+            } else {
+                console.error("La valeur du PDF est vide.");
+            }
         } else {
             console.error("Type non pris en charge : " + type);
         }
     }
 
+    // Sélectionner tous les liens dans les social_links
+    document.querySelectorAll('.social_links li a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Enlever la classe active de tous les liens
+            document.querySelectorAll('.social_links li a').forEach(a => {
+                a.classList.remove('active'); // Retirer la classe active
+            });
+
+            // Ajouter la classe active au lien cliqué
+            this.classList.add('active'); // Ajouter la classe active
+        });
+    });
 </script>
 
 </body>
