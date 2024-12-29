@@ -20,11 +20,21 @@
       <li>
         <ul class="menu_items">
           <li>
-              <a href="cours.html" ><img src="pic/livres.png" alt="logo">&ensp;&ensp;1ere annere</a>
+            <a id="h" href="cours.html" ><img src="pic/livres.png" alt="logo">&ensp;&ensp;1ere annere</a>
           </li>
-          <li><a href="cours_3eme.html" ><img src="pic/devoirs.png" alt="logo" >&ensp;&ensp;3eme annere</a></li>
-          <li><a href="#" ><img src="pic/journal.png" alt="logo" >&ensp;&ensp;Journal-scolaire</a></li>
-          <li><a href="#contact"><img src="pic/contact.png" alt="logo" >&ensp;&ensp;Contact</a></li>
+          <li><a id="ho" href="cours_3eme.html" ><img src="pic/devoirs.png" alt="logo" >&ensp;&ensp;3eme annere</a></li>
+          <li><a id="hov" href="#" ><img src="pic/journal.png" alt="logo" >&ensp;&ensp;Journal-scolaire</a></li>
+          <li>
+            <a id="hover" href="#" ><img src="pic/journal.png" alt="logo" >&ensp;&ensp;Les sites amis</a>
+            <ul class="social_links">
+              <li><a href="https://www.francaisfacile.com/" target="_blank">&ensp;&ensp; Francais facile</a></li>
+              <li><a href="https://www.lepointdufle.net/" target="_blank">&ensp;&ensp; Le point du fle</a></li>
+              <li><a href="https://bonjourdefrance.com/" target="_blank">&ensp;&ensp; Bonjour de france</a></li>
+              <li><a href="https://enseigner.tv5monde.com/" target="_blank">&ensp;&ensp; Tv5monde</a></li>
+              <li><a href="https://www.cavilam.com/" target="_blank">&ensp;&ensp; Cavilam</a></li>
+            </ul>
+          </li>
+          <li><a id="hovr" href="#contact"><img src="pic/contact.png" alt="logo" >&ensp;&ensp;Contact</a></li>
         </ul>
       </li>
     </ul>
@@ -67,12 +77,12 @@
   <!-- Separateur -->
   <div class="sepa">
     <img src="pic/barre(1).png" alt="sepa">
-      <div class="buttons">
-        <a href="#"><button type="button">1</button></a>
-        <a href="#"><button type="button">2</button></a>
-        <a href="#"><button type="button">3</button></a>
-        <a href="#"><button type="button">4</button></a>
-      </div>
+    <div class="buttons">
+      <a href="#"><button type="button">1</button></a>
+      <a href="#"><button type="button">2</button></a>
+      <a href="#"><button type="button">3</button></a>
+      <a href="#"><button type="button">4</button></a>
+    </div>
   </div>
 </div>
 
@@ -182,6 +192,16 @@
   </div>
 </footer>
 <script>
+  // Ajouter un gestionnaire d'événements au document pour masquer les sous-menus au clic à l'extérieur
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!target.closest('.menu_items')) {
+      document.querySelectorAll('.social_links').forEach((menu) => {
+        menu.style.display = 'none';
+      });
+    }
+  });
+
   // Fonction pour basculer la visibilité du menu
   function toggleMenu() {
     const menuItems = document.querySelector('.menu_items');
@@ -197,6 +217,34 @@
 
   // Ajouter un gestionnaire d'événements pour le clic sur le menu
   menu.addEventListener('click', toggleMenu);
+
+  // Sélectionner tous les éléments qui contiennent des sous-menus
+  const menuItems = document.querySelectorAll('.menu_items li');
+
+  menuItems.forEach((item) => {
+    const subMenu = item.querySelector('.social_links');
+
+    // Vérifier si un sous-menu existe pour cet élément
+    if (subMenu) {
+      // Ajouter un gestionnaire d'événement au clic sur le parent
+      item.addEventListener('click', (event) => {
+        event.stopPropagation(); // Empêche la propagation du clic vers les éléments parents
+
+        // Basculer la visibilité du sous-menu
+        if (subMenu.style.display === 'block') {
+          subMenu.style.display = 'none';
+        } else {
+          // Masquer tous les autres sous-menus
+          document.querySelectorAll('.social_links').forEach((menu) => {
+            menu.style.display = 'none';
+          });
+
+          // Afficher le sous-menu actuel
+          subMenu.style.display = 'block';
+        }
+      });
+    }
+  });
 </script>
 </body>
 </html>
