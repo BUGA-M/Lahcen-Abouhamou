@@ -323,7 +323,7 @@ main #CONTENU {
     box-shadow:1px 1px 15px rgba(0, 0, 0, 0.2) ;
 }
 /* Media Queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .banner_menu{
         width: 100%;
         min-height: 450px;

@@ -25,7 +25,7 @@ body {
     font-family:police5;
     src: url("../font_lahcen/Alterous_Display_Preview.otf") format("opentype");
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .header .nav a button {
         margin: 5px -10px 5px 0; /* Ajuste le margin-top des boutons dans la navigation */
     }
