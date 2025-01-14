@@ -10,6 +10,24 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(30, 30, 30, 0.13);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #39f30e, #c4fac7, #39f30e);
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(65, 65, 65, 0.3);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #c4fac7, #39f30e, #c4fac7);
+}
 /* Media Queries */
 
 @font-face
