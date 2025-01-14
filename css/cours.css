@@ -29,6 +29,11 @@ body::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #c4fac7, #39f30e, #c4fac7);
 }
 /* Media Queries */
+@media (max-width: 480px) {
+    body::-webkit-scrollbar{
+        display: none;
+    }
+}
 
 @font-face
 {

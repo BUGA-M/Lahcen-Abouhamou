@@ -48,6 +48,12 @@ body::-webkit-scrollbar-thumb:hover {
         margin: 5px -10px 5px 0; /* Ajuste le margin-top des boutons dans la navigation */
     }
 }
+@media (max-width: 480px) {
+    body::-webkit-scrollbar{
+        display: none;
+    }
+
+}
 /* Header */
 .header{
     width: 100%;
