@@ -9,6 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: rgba(34, 79, 65, 0.9);
 }
 body::-webkit-scrollbar {
     width: 12px;
@@ -142,6 +143,7 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 22px;
     color: #444444;
     text-decoration: none;
+    cursor: pointer;
 }
 .nav_items .dropdown a:hover{
     text-decoration: underline;
@@ -207,6 +209,7 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 20px;
     color: #444444; /* Couleur du texte du sous-menu */
     text-decoration: none; /* Pas de soulignement */
+    cursor: pointer;
 }
 
 
