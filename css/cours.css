@@ -161,7 +161,7 @@ body::-webkit-scrollbar-thumb:hover {
 .nav_items li:hover img {
     opacity: 100%;
 }
-
+/*---------------------------- Social link (barre de Menu) ------------------------------------*/
 .social_links {
     display: none; /* Masquer les sous-menus par défaut */
     list-style: none; /* Supprimer le style de liste */
@@ -173,8 +173,27 @@ body::-webkit-scrollbar-thumb:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre pour le sous-menu */
     z-index: 100; /* S'assurer que le sous-menu est au-dessus */
     width: 80%; /* S'assurer que le sous-menu prend toute la largeur */
+    height: 400px;
+    overflow-y: scroll;
+}
+/* Personnalisation pour les navigateurs WebKit (Chrome, Safari, etc.) */
+.social_links::-webkit-scrollbar {
+    width: 6px; /* Largeur très fine de la barre de défilement */
 }
 
+.social_links::-webkit-scrollbar-track {
+    background: transparent; /* Fond transparent */
+}
+
+.social_links::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2); /* Couleur très claire et semi-transparente */
+    border-radius: 3px; /* Bords arrondis pour la barre */
+}
+
+.social_links::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3); /* Légèrement plus visible au survol */
+}
+/*----------------------------------------------------------------*/
 .nav_items li:hover .social_links {
     display: block; /* Afficher les sous-menus au survol */
 }
