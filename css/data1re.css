@@ -1,0 +1,120 @@
+/* Grid de contenu */
+.content-grid {
+    display: grid;
+    gap: 20px;
+    padding: 15px;
+}
+
+/* Cartes de contenu */
+.content-card {
+    /*background: white;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);*/
+    /*padding: 20px;*/
+}
+
+/* Galerie d'images */
+.image-gallery {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /*margin-bottom: 15px;*/
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    cursor: zoom-in;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Conteneur d'image */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #000000;
+}
+
+/* Légende de l'image */
+.image-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px;
+    font-size: 0.9em;
+    text-align: center;
+    transition: transform 0.3s;
+    transform: translateY(-100%);
+}
+
+.image-container:hover .image-caption {
+    transform: translateY(0);
+}
+
+
+.text-content {
+    padding: 10px;
+    background: rgba(71, 71, 71, 0.18);
+    backdrop-filter: blur(40px);
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+}
+
+.content-title {
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    position: relative;
+}
+.content-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: radial-gradient(circle, #04D283, #038F68, #025C42);
+}
+.menu-active {
+    background: #34495e !important;
+}
+
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    cursor: zoom-out;
+}
+
+.fullscreen-container img {
+    max-width: 95%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+.blur-background {
+    filter: blur(8px);
+    pointer-events: none;
+}
+
+.fullscreen-active {
+    overflow: hidden;
+}

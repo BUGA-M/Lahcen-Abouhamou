@@ -5,14 +5,27 @@
   <meta name="description" content="Un site dédié à l'apprentissage et à l'éducation, offrant des ressources pédagogiques variées pour les étudiants.">
   <meta name="keywords" content="Lahcen Abouhamou,Azzaitoun, école, éducation, ressources, études, cours, tutoriels, apprentissage, étudiants">
   <meta name="author" content="Lahcen Abouhamou">
-  <meta http-equiv="refresh" content="300"> <!-- Rafraîchit la page toutes les 5 minutes -->
+  <meta http-equiv="refresh" content="3600"> <!-- Rafraîchit la page toutes les 5 minutes -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no, email=no">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="google" content="nositelinkssearchbox">
-  <title>Azzaitoun</title>
+  <title>AZZAITOUNE</title>
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/acceuil.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- font 1-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <!-- font 2 : Cinzel Decorative-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- font 3 : Righteous -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
   <!-- Favicon -->
   <link rel="icon" href="pic/icon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="pic/apple-touch-icon.png">
@@ -72,239 +85,207 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollToPlugin.min.js"></script>
 </head>
 <body>
-<!-- Header -->
-<header class="header">
-  <div class="menu" id="menu">
+<!-- Contenu du site -->
+<div class="site-content">
+  <header>
+    <!--        <div class="logoHeader">-->
+    <!--          <img src="pic/logo4.jpg" alt="logo">-->
+    <!--        </div>-->
+    <h2>AZZAITOUNE</h2>
+    <div class="search-container">
+      <input type="text" class="search-input" id="searchInput" placeholder="Rechercher...">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+      </svg>
+    </div>
+    <button id="menu-toggle" class="mobile-menu-toggle">
+      <i class="bi bi-list"></i>
+    </button>
+  </header>
+  <!---------------------------- menu a droite --------------------------->
+  <div class="menu" id="mobile-menu">
+    <div class="partie1">
+      <ul class="n1">
+        <li id="toggleButton" class="toggle-btn">
+          <a>
+            <i class="bi bi-arrow-right icon"></i>
+            <span class="menu-text">Réduire</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="active">
+            <i class="bi bi-house"></i>
+            <span class="menu-text">Home</span>
+          </a>
+        </li>
+        <li>
+          <a >
+            <i class="bi bi-book"></i>
+            <span class="menu-text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a >
+            <i class="bi bi-person-lines-fill"></i>
+            <span class="menu-text">Profile</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="n2">
+        <li>
+          <a >
+            <i class="bi bi-bell"></i>
+            <span class="menu-text">Notifications</span>
+          </a>
+        </li>
+        <li><a href="#"><i class="bi bi-gear"></i><span class="menu-text">Settings</span></a></li>
+      </ul>
+    </div>
+    <div class="partie2">
+      <ul>
+        <li id="theme-toggle"><a><i class="bi-sun"></i><span class="menu-text">Theme</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <!---------------------------- menu de tele --------------------------->
+  <div  class="menu-phone" style="display:none ">
     <ul>
-      <li><img src="pic/menu_blanc.png" alt="logo"></li>
       <li>
-        <ul class="menu_items">
-          <li>
-            <a id="h" href="cours.html" ><img src="pic/livres.png" alt="logo">&ensp;&ensp;1re année</a>
-          </li>
-          <li><a id="ho" href="cours_3eme.html" ><img src="pic/devoirs.png" alt="logo" >&ensp;&ensp;3e année</a></li>
-          <li><a id="hov" href="#" ><img src="pic/journal.png" alt="logo" >&ensp;&ensp;Journal-scolaire</a></li>
-          <li>
-            <a id="hover" href="#" ><img src="pic/journal.png" alt="logo" >&ensp;&ensp;Les sites amis</a>
-            <ul class="social_links">
-              <li><a href="https://www.francaisfacile.com/" target="_blank">&ensp;&ensp; Francais facile</a></li>
-              <li><a href="https://www.lepointdufle.net/" target="_blank">&ensp;&ensp; Le point du fle</a></li>
-              <li><a href="https://bonjourdefrance.com/" target="_blank">&ensp;&ensp; Bonjour de france</a></li>
-              <li><a href="https://enseigner.tv5monde.com/" target="_blank">&ensp;&ensp; Tv5monde</a></li>
-              <li><a href="https://www.cavilam.com/" target="_blank">&ensp;&ensp; Cavilam</a></li>
-            </ul>
-          </li>
-          <li><a id="hovr" href="#contact"><img src="pic/contact.png" alt="logo" >&ensp;&ensp;Contact</a></li>
-        </ul>
+        <a >
+          <i class="bi bi-house"></i>
+        </a>
+      </li>
+      <li>
+        <a >
+          <i class="bi bi-book"></i>
+        </a>
+      </li>
+      <li>
+        <a >
+          <i class="bi bi-person-lines-fill"></i>
+        </a>
+      </li>
+      <!--        <li>-->
+      <!--          <a href="#">-->
+      <!--            <i class="bi bi-bell"></i>-->
+      <!--          </a>-->
+      <!--        </li>-->
+      <li>
+        <a href="#">
+          <i class="bi bi-gear"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bi-sun"></i>
+        </a>
+      </li>
+      <li id="contact-toggle" >
+        <a>
+          <i class="bi bi-chat-dots"></i>
+        </a>
       </li>
     </ul>
   </div>
-  <div class="logo">
-    <img src="pic/logo_2%20(2).png" alt="logo"> <!-- Remplacez par le chemin correct -->
+  <!---------------------------- contenue principale --------------------------->
+  <div class="dashboard">
+    <div class="presentation">
+      <div class="preview">
+        <!------------- LOGO -------------->
+        <div class="images-owner">
+          <img src="pic/logo5.jpg" alt="mar pic">
+        </div>
+        <!------------- description -------------->
+        <div class="description">
+          <div class="container">
+            <span id="text1"></span><span id="cursor1" class="cursor">&nbsp;</span>
+          </div>
+          <div class="container">
+            <span id="text2"></span><span id="cursor2" class="cursor">&nbsp;</span>
+          </div>
+          <div class="container">
+            <span id="text3"></span><span id="cursor3" class="cursor">&nbsp;</span>
+          </div>
+        </div>
+      </div>
+      <!------------- Explication sur le Contenue  -------------->
+      <div class="explication">
+        <div class="diamond">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <a href="pages/1re.html">1ʳᵉ année</a>
+        </div>
+        <div class="diamond">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <a href="#" class="text">2ᵉ année</a>
+        </div>
+        <div class="diamond">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <a href="pages/3e.html">3ᵉ année</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="container">
-    <nav class="nav">
-      <a href="#"><button type="button">S'inscrire</button></a>
-      <a href="#"><button type="button">Se connecter</button></a>
-    </nav>
+  <!--------------------------- contact ----------------------------->
+  <div class="contact" id="contact-section">
+    <h3>Contacts</h3>
+    <hr class="gradient-line">
+    <div class="info1">
+      <ul>
+        <li><a href="https://www.google.com/maps/place/Ait+Jerrar/@29.137819,-9.577936,16.5z/data=!4m6!3m5!1s0xdb44a43fb7a4aad:0x4da020ce2257a431!8m2!3d29.1365853!4d-9.5736069!16s%2Fg%2F11g6rkq6px?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D"
+               target="_blank"><i class="bi bi-geo-alt"></i>Ait Jerrar, Tiznit,Maroc</a></li>
+        <li><a href="mailto:abouhamou11@gmail.com"><i class="bi bi-envelope"></i>abouhamou11@gmail.com</a></li>
+        <li><a href="tel:+212 684981113"><i class="bi bi-telephone"></i>+212 684981113</a></li>
+        <li><a href="https://github.com/BUGA-M" target="_blank"><i class="bi bi-github"></i>github.com/BUGA-M</a></li>
+        <li><a href="https://facebook.com/" target="_blank"><i class="bi bi-facebook"></i>facebook.com/Buga</a></li>
+        <li><a href="https://instagram.com/Bugaa_17" target="_blank"><i class="bi bi-instagram"></i>instagram.com/Bugaa_17</a></li>
+      </ul>
+    </div>
+    <div class="comment-box">
+      <textarea id="comment" placeholder="Écrivez votre commentaire..."></textarea>
+      <button onclick="Commentaire()">Envoyer</button>
+    </div>
   </div>
-</header>
-
-<!-- Bienvenue Section -->
-<div class="bien" id="haut">
-  <img src="pic/bien.png" alt="bienvenu">
 </div>
 
-<!-- Main Content -->
-<main class="main">
-  <div class="content">
-    <section class="section">
-      <h2>Nouveau</h2>
-      <p></p>
-    </section>
-    <section class="section">
-      <h2>Annonce</h2>
-      <p></p>
-    </section>
-  </div>
-</main>
 
-
-
-<!-- Accès au cours -->
-<div class="access-cours">
-  <h2>Pour accéder au cours</h2>
-  <!-- Separateur -->
-  <div class="sepa">
-    <img src="pic/barre(1).png" alt="sepa">
-    <div class="buttons">
-      <a href="#"><button type="button">1</button></a>
-      <a href="#"><button type="button">2</button></a>
-      <a href="#"><button type="button">3</button></a>
-      <a href="#"><button type="button">4</button></a>
-    </div>
-  </div>
+<!------------------- fenêtre pour envoi du message ------------------>
+<div class="window none">
+  <h2>
+    Merci !! votre commentaire a bien été envoyé.
+  </h2>
+  <button class="ok">Fermer</button>
 </div>
-
-<!-- Inscription -->
-<section class="inscription" >
-  <div class="left">
-    <img id="online" src="pic/premium-online.png" alt="Étude en ligne">
-  </div>
-  <div class="right">
-    <div class="titre">
-      <img src="pic/lv_vr.png" alt="livre">
-      <h3>Étudiez, progressez, réussissez à portée de main</h3>
-    </div>
-    <div class="para">
-      <p class="para"><span>AZZAITOUN</span>, votre site d'étude en ligne,
-        un espace dédié exclusivement à nos élèves pour favoriser un apprentissage interactif et personnalisé.
-        Ici, vous pouvez accéder à tous vos cours, consulter des ressources complémentaires, et rester informé des dernières annonces.
-        Ce site a été conçu pour offrir un environnement de travail structuré et motivant, avec des outils pratiques pour vous aider à réussir.
-        En plus des cours, vous trouverez un forum pour poser vos questions et échanger avec vos camarades...</p>
-    </div>
-    <div class="botona">
-      <a href="#"><button type="button" class="creer">Créer un compte</button></a>
+<!------------------- Conteneur pour le modèle 3D ------------------>
+<div id="spline-container">
+  <!------------- loading -------------->
+  <div class="loading-overlay">
+    <div id="loading-logo">
+      <h2 id="loading-text"></h2>
     </div>
   </div>
-</section>
-
-<!-- Suggestion -->
-<section class="suggestion">
-  <div class="design">
-    <img src="pic/Design.png" alt="design">
+  <!---- cacher ----->
+  <div class="cacher">
+    <h2>BUGA</h2>
   </div>
-  <div class="content">
-    <div class="titre">
-      <img src="pic/question_vr.png" alt="suggestion">
-      <h3>Aide, Suggestion ou Signalement</h3>
-    </div>
-    <div class="botona">
-      <a href="mailto:marouane.abouhamou.10@gmail.com"><button type="button" class="sugg">Nous contacter</button></a>
-    </div>
-    <div class="social">
-      <a href="#"><img src="pic/youtube.png" alt="YouTube"></a>
-      <a href="#" target="_blank"><img src="pic/facebook.png" alt="Facebook"></a>
-      <a href="https://www.instagram.com/ma4rouane/" target="_blank"><img src="pic/instagram.png" alt="Instagram"></a>
-      <a href="https://wa.me/+212684981113" target="_blank"><img src="pic/whatsapp.png" alt="WhatsApp"></a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-section">
-      <img class="imag_logo" src="pic/logo_2%20(2).png" alt="logo">
-    </div>
-    <div class="footer-section">
-      <h2>Nous contacter</h2>
-      <div class="contact-info">
-        <img src="pic/appel.png" alt="tel">
-        <a href="tel:+212684981113" target="_blank">06 84 98 11 13</a>
-      </div>
-      <div class="contact-info">
-        <img src="pic/mail.png" alt="mail">
-        <a href="mailto:marouane.abouhamou.10@gmail.com" target="_blank">Nous écrire</a>
-      </div>
-      <div class="contact-info">
-        <img src="pic/whatsapp.png" alt="whatsapp">
-        <a href="https://wa.me/+212684981113" target="_blank">WhatsApp</a>
-      </div>
-    </div>
-
-    <div class="footer-section">
-      <h2>Aide & guides</h2>
-      <div class="service-info"><a href="#">AIDE</a></div>
-      <div class="service-info"><a href="#">Cours</a></div>
-      <div class="service-info"><a href="#">Contrôles</a></div>
-      <div class="service-info"><a href="#">Journal scolaire</a></div>
-    </div>
-
-    <div class="footer-section" id="contact">
-      <h2>Nos plateformes</h2>
-      <div class="service-info">
-        <img src="pic/youtube.png" alt="YouTube">
-        <a href="#" target="_blank">YOUTUBE</a>
-      </div>
-      <div class="service-info">
-        <img src="pic/facebook.png" alt="Facebook">
-        <a href="#" target="_blank">Facebook</a>
-      </div>
-      <div class="service-info">
-        <img src="pic/instagram.png" alt="Instagram">
-        <a href="https://www.instagram.com/ma4rouane/" target="_blank">Instagram</a>
-      </div>
-      <div class="service-info">
-        <img src="pic/twitter2.png" alt="twitter">
-        <a href="#" target="_blank">X|Twitter </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="back-to-top">
-    <div class="droit">
-      <p>&copy; 2024 Azzaitoun. Tous droits réservés.</p>
-    </div>
-    <a href="#haut">
-      <img src="pic/haut.png" alt="haut">
-    </a>
-  </div>
-</footer>
-<script>
-  // Ajouter un gestionnaire d'événements au document pour masquer les sous-menus au clic à l'extérieur
-  document.addEventListener('click', (event) => {
-    const target = event.target;
-    if (!target.closest('.menu_items')) {
-      document.querySelectorAll('.social_links').forEach((menu) => {
-        menu.style.display = 'none';
-      });
-    }
-  });
-
-  // Fonction pour basculer la visibilité du menu
-  function toggleMenu() {
-    const menuItems = document.querySelector('.menu_items');
-    if (menuItems.style.display === 'block') {
-      menuItems.style.display = 'none'; // Cacher le menu
-    } else {
-      menuItems.style.display = 'block'; // Afficher le menu
-    }
-  }
-
-  // Sélectionner le menu
-  const menu = document.getElementById('menu');
-
-  // Ajouter un gestionnaire d'événements pour le clic sur le menu
-  menu.addEventListener('click', toggleMenu);
-
-  // Sélectionner tous les éléments qui contiennent des sous-menus
-  const menuItems = document.querySelectorAll('.menu_items li');
-
-  menuItems.forEach((item) => {
-    const subMenu = item.querySelector('.social_links');
-
-    // Vérifier si un sous-menu existe pour cet élément
-    if (subMenu) {
-      // Ajouter un gestionnaire d'événement au clic sur le parent
-      item.addEventListener('click', (event) => {
-        event.stopPropagation(); // Empêche la propagation du clic vers les éléments parents
-
-        // Basculer la visibilité du sous-menu
-        if (subMenu.style.display === 'block') {
-          subMenu.style.display = 'none';
-        } else {
-          // Masquer tous les autres sous-menus
-          document.querySelectorAll('.social_links').forEach((menu) => {
-            menu.style.display = 'none';
-          });
-
-          // Afficher le sous-menu actuel
-          subMenu.style.display = 'block';
-        }
-      });
-    }
-  });
-</script>
+  <!------ model 3d  ------>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.79/build/spline-viewer.js"></script>
+  <spline-viewer url="https://prod.spline.design/y0GuqYbbIuOQxVEM/scene.splinecode"></spline-viewer>
+</div>
+<!------ Main scripts  ------>
+<script src="./js/loading.js"></script>
+<!------ animation feuilles ------>
+<script src="./js/animation_feuille.js"></script>
+<!------ effect lumiere  ------>
+<script src="./js/effet_lumier.js"></script>
+<canvas id="glowCanvas"></canvas>
 </body>
 </html>

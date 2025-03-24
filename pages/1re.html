@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Un site dédié à l'apprentissage et à l'éducation, offrant des ressources pédagogiques variées pour les étudiants.">
+    <meta name="keywords" content="Lahcen Abouhamou, Azzaitoun, école, éducation, ressources, études, cours, tutoriels, apprentissage, étudiants">
+    <meta name="author" content="Lahcen Abouhamou">
+    <meta http-equiv="refresh" content="3600"> <!-- Rafraîchit la page toutes les 5 minutes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="google" content="nositelinkssearchbox">
+
+    <title>1re année | AZZAITOUNE</title>
+
+    <link rel="stylesheet" href="/css/1re.css">
+    <link rel="stylesheet" href="/css/data1re.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- font 1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <!-- font 2 : Cinzel Decorative-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- font 3 : Righteous -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/pic/icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="pic/apple-touch-icon.png">
+
+    <!-- Language Alternatives -->
+    <link rel="alternate" href="https://www.lahcenabouhamou.site" hreflang="x-default">
+    <link rel="alternate" href="https://www.lahcenabouhamou.site/fr" hreflang="fr">
+    <link rel="alternate" href="https://www.lahcenabouhamou.site/ar" hreflang="ar">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lahcenabouhamou.site/cours.html">
+    <meta property="og:title" content="Azzaitoun | Cours et Ressources pour 1ère année">
+    <meta property="og:description" content="Plateforme éducative en ligne offrant des cours, exercices et ressources pour les étudiants de 1ère année.">
+    <meta property="og:image" content="https://www.lahcenabouhamou.site/pic/logo_2%20(2).png">
+    <meta property="og:site_name" content="Azzaitoun">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.lahcenabouhamou.site/cours.html">
+    <meta name="twitter:title" content="Azzaitoun | Cours et Ressources pour 1ère année">
+    <meta name="twitter:description" content="Plateforme éducative en ligne offrant des cours, exercices et ressources pour les étudiants de 1ère année.">
+    <meta name="twitter:image" content="https://www.lahcenabouhamou.site/pic/logo_2%20(2).png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "Cours de 1ère année",
+            "description": "Ressources pédagogiques pour les étudiants de 1ère année",
+            "provider": {
+                "@type": "EducationalOrganization",
+                "name": "Azzaitoun",
+                "url": "https://www.lahcenabouhamou.site"
+            },
+            "hasCourseInstance": {
+                "@type": "CourseInstance",
+                "courseMode": "online",
+                "educationalLevel": "beginner"
+            }
+        }
+    </script>
+
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+<div class="site-content">
+    <!--------------------- en tete ------------------------>
+    <header>
+        <h2>AZZAITOUNE</h2>
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="Rechercher...">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+        </div>
+        <button id="menu-toggle" class="mobile-menu-toggle">
+            <i class="bi bi-list"></i>
+        </button>
+    </header>
+    <!---------------------------- menu a droite --------------------------->
+    <div class="menu" id="mobile-menu">
+        <div class="partie1">
+            <ul class="n1">
+                <li id="toggleButton" class="toggle-btn">
+                    <a>
+                        <i class="bi bi-arrow-right icon"></i>
+                        <span class="menu-text">Réduire</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html" class="active">
+                        <i class="bi bi-house"></i>
+                        <span class="menu-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-calendar-range"></i>
+                        <span class="menu-text">Semestre 1 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-calendar-week"></i>
+                        <span class="menu-text">Semestre 2</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="n2">
+                <li>
+                    <a href="#">
+                        <i class="bi bi-2-circle"></i>
+                        <span class="menu-text">2e année</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="3e.html">
+                        <i class="bi bi-3-circle"></i>
+                        <span class="menu-text">3e année</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="partie2">
+            <ul>
+                <li id="theme-toggle"><a><i class="bi-sun"></i><span class="menu-text">Theme</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!---------------------------- menu de tele --------------------------->
+    <div  class="menu-phone"  id="toggleButtonPhone">
+        <ul class="changeBG" >
+            <li >
+                <a href="../index.html" >
+                    <i class="bi bi-house"></i>
+                </a>
+            </li>
+            <li id="contact-toggle" >
+                <a>
+                    <i class="bi bi-chat-dots"></i>
+                </a>
+            </li>
+            <li id="flecheHaut">
+                <a>
+                    <i class="bi bi-arrow-up IconHautPhone"></i>
+                </a>
+            </li>
+            <li>
+                <a >
+                    <i class="bi-sun"></i>
+                </a>
+            </li>
+            <li>
+                <a >
+                    <i class="bi bi-gear"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="span-menu-mobile">
+            <ul class="cours">
+                <li class="S1 list" >
+                    <a >
+                        <i class="bi bi-calendar-range"></i>
+                        <span >Semestre 1 </span>
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="courS1 " >
+                    <ul class="courses">
+                        <li>
+                            <a class="menu-item" >
+                                <i class="bi bi-journal-bookmark">&ensp;Cours</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu-item" >
+                                <i class="bi bi-file-earmark-text">&ensp;Examen </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu-item" >
+                                <i class="bi bi-pencil-square">&ensp;Exercice</i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="S2 list">
+                    <a >
+                        <i class="bi bi-calendar-week"></i>
+                        <span>Semestre 2</span>
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="courS2 "  >
+                    <ul class="courses">
+                        <li>
+                            <a class="menu-item">
+                                <i class="bi bi-journal-bookmark">&ensp;Cours</i>
+                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9l6 6 6-6" fill="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <ul class="submenu hidden">
+                                <li> Unité 1 : Prêt pour un petit effort ?</li>
+                                <li>Unité 2 : Propre et sain</li>
+                                <li>Unité 3 : Achats en ligne</li>
+                                <li>Unité 4 : Gérer son argent</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="menu-item">
+                                <i class="bi bi-file-earmark-text">&ensp;Examen</i>
+                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9l6 6 6-6" fill="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <ul class="submenu hidden">
+                                <li>Test Final</li>
+                                <li>Examen Blanc</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="menu-item">
+                                <i class="bi bi-pencil-square">&ensp;Exercice</i>
+                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9l6 6 6-6" fill="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <ul class="submenu hidden">
+                                <li>Exercice Vocabulaire : faire du sport | propre et sain </li>
+                                <li>Exercice 2 : Parler et demander avec politesse</li>
+                                <li>Exercice 3 : Les bienfaits physiques et moraux du sport</li>
+                                <li>Exercice 4 : Ma routine sportive et alimentaire</li>
+                                <li>Exercice 5 : Donner un ordre, Donner des conseils, interdire </li>
+                                <li>Correction Exercice 2 </li>
+                                <li>Correction Exercice 3 </li>
+                                <li>Correction Exercice 4 </li>
+                                <li>Correction Exercice 5 </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!------------- div du menu des cours tele -------------->
+
+    <!---------------------------- contenue principale --------------------------->
+    <div class="dashboard" >
+        <div class="presentation" >
+
+        </div>
+    </div>
+    <!--------------------------- contact ----------------------------->
+    <div class="contact" id="contact-section">
+        <h3>Contacts</h3>
+        <hr class="gradient-line">
+        <div class="info1">
+            <ul>
+                <li><a href="https://www.google.com/maps/place/Ait+Jerrar/@29.137819,-9.577936,16.5z/data=!4m6!3m5!1s0xdb44a43fb7a4aad:0x4da020ce2257a431!8m2!3d29.1365853!4d-9.5736069!16s%2Fg%2F11g6rkq6px?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D"
+                       target="_blank"><i class="bi bi-geo-alt"></i>Ait Jerrar, Tiznit,Maroc</a></li>
+                <li><a href="mailto:abouhamou11@gmail.com"><i class="bi bi-envelope"></i>abouhamou11@gmail.com</a></li>
+                <li><a href="tel:+212 684981113"><i class="bi bi-telephone"></i>+212 684981113</a></li>
+                <li><a href="https://github.com/BUGA-M" target="_blank"><i class="bi bi-github"></i>github.com/BUGA-M</a></li>
+                <li><a href="https://facebook.com/" target="_blank"><i class="bi bi-facebook"></i>facebook.com/Buga</a></li>
+                <li><a href="https://instagram.com/Bugaa_17" target="_blank"><i class="bi bi-instagram"></i>instagram.com/Bugaa_17</a></li>
+            </ul>
+        </div>
+        <div class="comment-box">
+            <textarea id="comment" placeholder="Écrivez votre commentaire..."></textarea>
+            <button onclick="Commentaire()">Envoyer</button>
+        </div>
+    </div>
+</div>
+
+<!------------------- fenêtre pour envoi du message ------------------>
+<div class="window none">
+    <h2>
+        Merci !! votre commentaire a bien été envoyé.
+    </h2>
+    <button class="ok">Fermer</button>
+</div>
+<!---- Cours scripts  ---->
+<script src="/js/anner/data1re.js"></script>
+<!---- Main scripts  ---->
+<script src="/js/anner/1re.js"></script>
+<!----- animation feuilles ----->
+<script src="/js/anner/animation_feuille.js"></script>
+<!----  effect lumiere  ---->
+<script src="/js/anner/effet_lumier.js"></script>
+<canvas id="glowCanvas"></canvas>
+
+</body>
+</html>
