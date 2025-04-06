@@ -42,11 +42,11 @@ const contentData = {
             images: [
                 { src: '/pic/img1ere_unt3/s1.jpg', title: 'Séance 1' },
                 { src: '/pic/img1ere_unt3/s1_1.jpg', title: 'La suite de la séance 1' },
-                { src: '/pic/img1ere_unt3/s2_3.jpg', title: 'Séance 2 et 3' },
-                { src: '/pic/img1ere_unt3/s4.jpg', title: 'Séance 4' },
-                { src: '/pic/img1ere_unt3/s5.jpg', title: 'Séance 5' },
-                { src: '/pic/img1ere_unt3/s6.jpg', title: 'Séance 6' },
-                { src: '/pic/img1ere_unt3/s7.jpg', title: 'Séance 7' }
+                { src: '/pic/img1ere_unt3/s2-3.jpeg', title: 'Séance 2 et 3' },
+                { src: '/pic/img1ere_unt3/s4.jpeg', title: 'Séance 4' },
+                { src: '/pic/img1ere_unt3/s5.png', title: 'Séance 5' },
+                { src: '/pic/img1ere_unt3/s6.jpeg', title: 'Séance 6' },
+                { src: '/pic/img1ere_unt3/s7.png', title: 'Séance 7' }
             ],
             text: ''
         }
